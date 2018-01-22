@@ -91,11 +91,6 @@
             <artifactId>beetl</artifactId>
             <version>${beetl.version}</version>
         </dependency>
-        <dependency>
-            <artifactId>cable-commons</artifactId>
-            <groupId>com.ximalaya.xmen</groupId>
-            <version>${cable-commons}</version>
-        </dependency>
         <!-- doc -->
         <dependency>
             <groupId>io.springfox</groupId>

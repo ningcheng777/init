@@ -18,7 +18,6 @@
         <mysql.driver.version>5.1.31</mysql.driver.version>
         <spring.version>4.3.3.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
-        <cable-commons>0.0.1-SNAPSHOT</cable-commons>
         <c3p0.version>0.9.1.2</c3p0.version>
         <mybatis-spring.version>1.2.0</mybatis-spring.version>
         <mybatis.version>3.2.7</mybatis.version>
@@ -104,12 +103,6 @@
             <properties>
                 <package.environment>production</package.environment>
                 <swagger.scope>provided</swagger.scope>
-            </properties>
-        </profile>
-        <profile>
-            <id>pp</id>
-            <properties>
-                <package.environment>pp</package.environment>
             </properties>
         </profile>
         <profile>
