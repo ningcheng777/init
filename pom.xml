@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ximalaya.grade</groupId>
+    <artifactId>init</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>init-common</module>
+    </modules>
+
+    <properties>
+        <fastjson.version>1.2.6</fastjson.version>
+        <commons-lang3>3.4</commons-lang3>
+        <mysql.driver.version>5.1.31</mysql.driver.version>
+        <spring.version>4.3.3.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
+        <cable-commons>0.0.1-SNAPSHOT</cable-commons>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <mybatis-spring.version>1.2.0</mybatis-spring.version>
+        <mybatis.version>3.2.7</mybatis.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <fasterxml-jackson.version>2.6.2</fasterxml-jackson.version>
+        <beetl.version>2.5.0</beetl.version>
+        <servlet.api>2.5</servlet.api>
+        <swagger.version>2.8.0</swagger.version>
+    </properties>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <touch file="pom.xml"/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <package.environment>development</package.environment>
+                <swagger.scope>compile</swagger.scope>
+            </properties>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <package.environment>production</package.environment>
+                <swagger.scope>provided</swagger.scope>
+            </properties>
+        </profile>
+        <profile>
+            <id>pp</id>
+            <properties>
+                <package.environment>pp</package.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>testing</id>
+            <properties>
+                <package.environment>testing</package.environment>
+                <swagger.scope>compile</swagger.scope>
+            </properties>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <!-- use the following if you're not using a snapshot version. -->
+        <repository>
+            <id>artifactory</id>
+            <name>ximalaya-releases</name>
+            <url>http://artifactory.ximalaya.com/artifactory/ximalaya-releases/</url>
+        </repository>
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>artifactory</id>
+            <name>ximalaya-snapshots</name>
+            <url>http://artifactory.ximalaya.com/artifactory/ximalaya-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
