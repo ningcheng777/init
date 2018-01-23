@@ -7,11 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="init-common" />
+        <module name="init-dal" />
+        <module name="init-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="init" target="1.8" />
       <module name="init-common" target="1.8" />
+      <module name="init-dal" target="1.8" />
+      <module name="init-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

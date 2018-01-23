@@ -21,5 +21,4 @@ buildNumber.properties
 out
 gen
 .DS_Store
-init-common/src/main/resources/
 init-common/src/test/

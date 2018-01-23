@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/init.iml" filepath="$PROJECT_DIR$/.idea/init.iml" />
       <module fileurl="file://$PROJECT_DIR$/init-common/init-common.iml" filepath="$PROJECT_DIR$/init-common/init-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/init-dal/init-dal.iml" filepath="$PROJECT_DIR$/init-dal/init-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/init-web/init-web.iml" filepath="$PROJECT_DIR$/init-web/init-web.iml" />
     </modules>
   </component>
 </project>
