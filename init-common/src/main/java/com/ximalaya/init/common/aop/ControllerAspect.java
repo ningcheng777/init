@@ -36,7 +36,7 @@ public class ControllerAspect {
             String location = joinPoint.getTarget().getClass().getName() + "#"
                     + joinPoint.getSignature().getName() + " ";
             if (e instanceof CommonServiceException) {
-                logger.warn(location + e.getMessage(), e);
+                logger.warn("service error in " + location);
                 resultBuilder.setMsg(e.getMessage());
                 resultBuilder.setStatus(ResultStatus.BUSINESS_ERROR);
             } else {
