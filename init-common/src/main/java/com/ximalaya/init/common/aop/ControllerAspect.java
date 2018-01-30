@@ -1,9 +1,9 @@
 package com.ximalaya.init.common.aop;
 
 import com.ximalaya.init.common.exception.CommonServiceException;
-import com.ximalaya.init.common.result.Result;
-import com.ximalaya.init.common.result.ResultBuilder;
-import com.ximalaya.init.common.result.ResultStatus;
+import com.ximalaya.init.common.web.result.Result;
+import com.ximalaya.init.common.web.result.ResultBuilder;
+import com.ximalaya.init.common.web.result.ResultStatus;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,7 +22,7 @@ public class ControllerAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(public com.ximalaya.init.common.result.Result *(..))")
+    @Pointcut("execution(public com.ximalaya.init.common.web.result.Result *(..))")
     public void returnResult() {
     }
 

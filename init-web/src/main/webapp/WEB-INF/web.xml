@@ -13,7 +13,7 @@
 
     <!--<filter>-->
     <!--<filter-name>CORSFilter</filter-name>-->
-    <!--<filter-class>com.ximalaya.init.common.filter.CORSFilter</filter-class>-->
+    <!--<filter-class>com.ximalaya.init.common.web.filter.CORSFilter</filter-class>-->
     <!--</filter>-->
     <!--<filter-mapping>-->
     <!--<filter-name>CORSFilter</filter-name>-->
@@ -35,7 +35,7 @@
 
     <!--<filter>-->
     <!--<filter-name>backendFilter</filter-name>-->
-    <!--<filter-class>com.ximalaya.init.common.filter.UserFilter</filter-class>-->
+    <!--<filter-class>com.ximalaya.init.common.web.filter.UserFilter</filter-class>-->
     <!--</filter>-->
     <!--<filter-mapping>-->
     <!--<filter-name>backendFilter</filter-name>-->

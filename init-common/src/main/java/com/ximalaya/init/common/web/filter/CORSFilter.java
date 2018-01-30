@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.filter;
+package com.ximalaya.init.common.web.filter;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

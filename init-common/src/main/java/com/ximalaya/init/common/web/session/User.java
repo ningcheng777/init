@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.session;
+package com.ximalaya.init.common.web.session;
 
 /**
  * @author ningcheng

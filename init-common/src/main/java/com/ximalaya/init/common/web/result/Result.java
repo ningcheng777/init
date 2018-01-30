@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.result;
+package com.ximalaya.init.common.web.result;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -18,6 +18,13 @@ public class Result<T> {
     private String msg;
     @ApiModelProperty(notes = "返回结果")
     private T value;
+
+    public Result() {
+    }
+
+    public Result(T value) {
+        this.value = value;
+    }
 
     public boolean isSuccess() {
         return isSuccess;

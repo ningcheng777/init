@@ -1,7 +1,7 @@
-package com.ximalaya.init.common.filter;
+package com.ximalaya.init.common.web.filter;
 
-import com.ximalaya.init.common.session.Session;
-import com.ximalaya.init.common.session.User;
+import com.ximalaya.init.common.web.session.Session;
+import com.ximalaya.init.common.web.session.User;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

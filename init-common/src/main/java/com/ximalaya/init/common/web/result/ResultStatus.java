@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.result;
+package com.ximalaya.init.common.web.result;
 
 /**
  * @author ningcheng

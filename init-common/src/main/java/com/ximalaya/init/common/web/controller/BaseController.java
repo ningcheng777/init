@@ -1,7 +1,7 @@
-package com.ximalaya.init.common.controller;
+package com.ximalaya.init.common.web.controller;
 
-import com.ximalaya.init.common.session.Session;
-import com.ximalaya.init.common.session.User;
+import com.ximalaya.init.common.web.session.Session;
+import com.ximalaya.init.common.web.session.User;
 
 import java.util.Optional;
 
