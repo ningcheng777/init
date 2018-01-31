@@ -3,6 +3,7 @@ package com.ximalaya.init.common.aop;
 import com.ximalaya.init.common.exception.CommonServiceException;
 import com.ximalaya.init.common.web.result.Result;
 import com.ximalaya.init.common.web.result.ResultStatus;
+import org.apache.thrift.TException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -38,6 +39,10 @@ public class ControllerAspect {
                 logger.warn("service error in " + location);
                 result.setMsg(e.getMessage());
                 result.setStatus(ResultStatus.BUSINESS_ERROR);
+            } else if (e instanceof TException) {
+                logger.error(location + e.getMessage(), e);
+                result.setMsg("远程调用错误");
+                result.setStatus(ResultStatus.RPC_ERROR);
             } else {
                 logger.error(location + e.getMessage(), e);
                 result.setMsg("系统错误");
