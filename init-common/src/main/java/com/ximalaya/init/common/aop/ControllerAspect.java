@@ -41,7 +41,7 @@ public class ControllerAspect {
                 result.setStatus(ResultStatus.BUSINESS_ERROR);
             } else if (e instanceof TException) {
                 logger.error(location + e.getMessage(), e);
-                result.setMsg("远程调用错误");
+                result.setMsg("系统错误");
                 result.setStatus(ResultStatus.RPC_ERROR);
             } else {
                 logger.error(location + e.getMessage(), e);
