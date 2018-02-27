@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.object;
+package com.ximalaya.init.common.util;
 
 import static java.text.MessageFormat.format;
 import static java.util.Objects.requireNonNull;

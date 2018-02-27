@@ -11,7 +11,7 @@ import java.util.Optional;
  * @author ningcheng
  * @date 2018/1/31
  */
-public class CommonConverter {
+public class ConvertUtil {
 
     public static Integer convertDate2Int(Date source) {
         return Optional.ofNullable(source)

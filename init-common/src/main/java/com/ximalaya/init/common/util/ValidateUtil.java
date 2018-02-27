@@ -1,4 +1,4 @@
-package com.ximalaya.init.common.object;
+package com.ximalaya.init.common.util;
 
 import com.ximalaya.init.common.exception.CommonServiceException;
 import org.apache.commons.lang3.StringUtils;
