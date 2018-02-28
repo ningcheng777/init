@@ -21,12 +21,15 @@ public class IndexController {
     private final static String OPS_STATIC_URL_KEY = "opsStaticUrl";
     private final static String MODULE = "module";
     private final static String NAME = "name";
+    private final static String TITLE = "title";
     private final static String VERSION = "version";
 
     @Value("${ops.static.url}")
     private String opsStaticUrl;
     @Value("${name}")
     private String name;
+    @Value("${title}")
+    private String title;
     @XmlyconfFileItem(name = "version")
     private String version;
 
@@ -37,6 +40,7 @@ public class IndexController {
         ret.addObject(MODULE, module);
         ret.addObject(VERSION, version);
         ret.addObject(NAME, name);
+        ret.addObject(TITLE, title);
         ret.setViewName("/WEB-INF/views/index");
         return ret;
     }
