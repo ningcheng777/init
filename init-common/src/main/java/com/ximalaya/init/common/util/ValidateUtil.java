@@ -18,7 +18,7 @@ public class ValidateUtil {
 
     private static ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 
-    public static <T> void validate(T t) {
+    public static <T> void validate(T t, Class<?>... groups) {
         List<String> messageList = new ArrayList<>();
         for (ConstraintViolation<T> constraintViolation : factory.getValidator().validate(t)) {
             messageList.add(constraintViolation.getMessage());

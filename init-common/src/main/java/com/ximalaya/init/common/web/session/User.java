@@ -6,7 +6,9 @@ package com.ximalaya.init.common.web.session;
  */
 public class User {
 
-    private String id = "-";
+    public static final String DEFAULT_ID = "-";
+
+    private String id;
 
     public String getId() {
         return id;
