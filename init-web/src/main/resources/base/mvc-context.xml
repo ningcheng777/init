@@ -29,6 +29,7 @@
                                         value="yyyy-MM-dd HH:mm:ss"/>
                             </bean>
                         </property>
+                        <property name="timeZone" value="GMT+8" />
                     </bean>
                 </property>
             </bean>
