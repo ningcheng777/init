@@ -9,14 +9,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @date 2018/1/9
  */
 public class BaseObject {
+    @Override
     public String toString() {
         return JSON.toJSONString(this);
     }
 
+    @Override
     public boolean equals(Object obj) {
         return EqualsBuilder.reflectionEquals(this, obj);
     }
 
+    @Override
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
     }
