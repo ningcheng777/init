@@ -12,7 +12,7 @@ import java.util.Optional;
 public class BaseController {
 
     protected String getOper() {
-        return Optional.ofNullable(Session.getUser()).map(User::getId).orElse(User.DEFAULT_ID);
+        return Optional.ofNullable(Session.getUser().getId()).orElse(User.DEFAULT_ID);
 
     }
 }
