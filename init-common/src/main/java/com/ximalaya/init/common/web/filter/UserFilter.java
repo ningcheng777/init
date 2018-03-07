@@ -30,7 +30,7 @@ public class UserFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         User user = new User();
         String userId = String.valueOf(request.getAttribute(UID_ATTRIBUTE));
-        if (userId != null) {
+        if (userId != null && !"null".equals(userId)) {
             user.setId(userId);
         }
         Session.setUser(user);
