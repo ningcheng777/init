@@ -8,7 +8,7 @@ public class User {
 
     public static final String DEFAULT_ID = "-";
 
-    private String id;
+    private String id = DEFAULT_ID;
 
     public String getId() {
         return id;
