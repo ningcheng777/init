@@ -106,28 +106,6 @@
             <artifactId>libthrift</artifactId>
             <version>0.10.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.ximalaya.passport</groupId>
-            <artifactId>passport-sso-api</artifactId>
-            <version>0.0.15</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-asm</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.ximalaya.grade</groupId>
-            <artifactId>grade-common</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>fastjson</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
     </dependencies>
 
     <build>
